@@ -10,7 +10,7 @@ export function useSearch() {
 
   useEffect(() => {
     if (isFirstInput.current) {
-      isFirstInput.current = search === '';
+      isFirstInput.current = search === "";
       return;
     }
 
@@ -38,12 +38,12 @@ export function useSearch() {
 }
 
 function App() {
-  const { movies } = useMovies();
   const { search, setSearch, error } = useSearch();
+  const { movies, getMovies, loading } = useMovies({ search });
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log({ search });
+    getMovies();
   };
 
   const handleChange = (event) => {
@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="page">
       <header>
-        <h1>Search your movie</h1>
+        <h1>Movie Search</h1>
         <form className="form" onSubmit={handleSubmit}>
           <input
             style={{
@@ -63,16 +63,14 @@ function App() {
             onChange={handleChange}
             value={search}
             name="query"
-            placeholder="Avengers, SatrWars, Matrix..."
+            placeholder="Avengers, Deadpool, Matrix..."
           />
           <button type="submit">Search</button>
         </form>
         {error && <p style={{ color: "red" }}>{error}</p>}
       </header>
 
-      <main>
-        <Movies movies={movies} />
-      </main>
+      <main>{loading ? <p>Loading...</p> : <Movies movies={movies} />}</main>
     </div>
   );
 }

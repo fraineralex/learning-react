@@ -1,8 +1,8 @@
 export function ListOfMovies({ movies }) {
   return (
-    <ul>
+    <ul className="movies">
       {movies.map((movie) => (
-        <li key={movie.id}>
+        <li className="movie" key={movie.id}>
           <h3>{movie.title}</h3>
           <p>{movie.year}</p>
           <img src={movie.poster} alt={movie.title} />
@@ -13,7 +13,7 @@ export function ListOfMovies({ movies }) {
 }
 
 export function NoMoviesResults() {
-  return <p>No movies found</p>;
+  return <p>No movies found for your search</p>;
 }
 
 export function Movies({ movies }) {
