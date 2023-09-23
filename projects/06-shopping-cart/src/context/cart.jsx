@@ -1,38 +1,43 @@
-import { createContext, useState } from "react";
+import { createContext, useReducer } from 'react'
+import {
+  cartReducer,
+  CartInitialState,
+  CART_ACTIONS_TYPES
+} from '../reducers/cart'
 
-export const CartContext = createContext();
+export const CartContext = createContext()
+
+function useCartReducer () {
+  const [state, dispatch] = useReducer(cartReducer, CartInitialState)
+
+  const addToCart = product =>
+    dispatch({
+      type: CART_ACTIONS_TYPES.ADD_TO_CART,
+      payload: product
+    })
+
+  const removeFromCart = product =>
+    dispatch({
+      type: CART_ACTIONS_TYPES.REMOVE_FROM_CART,
+      payload: product
+    })
+
+  const clearCart = () =>
+    dispatch({
+      type: CART_ACTIONS_TYPES.CLEAR_CART
+    })
+
+  return { state, addToCart, removeFromCart, clearCart }
+}
 
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
-
-  const addToCart = (product) => {
-    // Check if the product is already in the cart
-    const productInCartIndex = cart.findIndex((item) => item.id === product.id);
-
-    // If the product is already in the cart
-    if (productInCartIndex >= 0) {
-      // Using structured cloning algorithm to clone the cart
-      const newCart = structuredClone(cart);
-      newCart[productInCartIndex].quantity++;
-      return setCart(newCart);
-    }
-
-    // If the product is not in the cart
-    setCart((previousCart) => [
-      ...previousCart,
-      {
-        ...product,
-        quantity: 1,
-      },
-    ]);
-  };
-  const clearCart = () => {
-    setCart([]);
-  };
+  const { state, addToCart, removeFromCart, clearCart } = useCartReducer()
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, clearCart }}>
+    <CartContext.Provider
+      value={{ cart: state, addToCart, clearCart, removeFromCart }}
+    >
       {children}
     </CartContext.Provider>
-  );
-};
+  )
+}
