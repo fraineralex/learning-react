@@ -1,10 +1,10 @@
-import { Filters } from './Filters.jsx'
+import { Filters } from "./Filters.jsx";
 
-export function Header ({ changeFilters }) {
+export function Header() {
   return (
     <header>
       <h1>Shopping Cart 🛒</h1>
-      <Filters changeFilters={changeFilters} />
+      <Filters />
     </header>
-  )
+  );
 }
