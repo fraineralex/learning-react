@@ -1,35 +1,35 @@
-import "./Filters.css";
-import { useId } from "react";
-import { useFilters } from "../hooks/useFilters.js";
+import './Filters.css'
+import { useId } from 'react'
+import { useFilters } from '../hooks/useFilters.js'
 
-export function Filters() {
-  const { filters, setFilters } = useFilters();
-  const minPriceFilterId = useId();
-  const categoryFilterId = useId();
+export function Filters () {
+  const { filters, setFilters } = useFilters()
+  const minPriceFilterId = useId()
+  const categoryFilterId = useId()
 
-  const handleChangeMinPrice = (event) => {
-    setFilters((previousFilters) => ({
+  const handleChangeMinPrice = event => {
+    setFilters(previousFilters => ({
       ...previousFilters,
-      minPrice: event.target.value,
-    }));
-  };
+      minPrice: event.target.value
+    }))
+  }
 
-  const handleChangeCategory = (event) => {
-    setFilters((previousFilters) => ({
+  const handleChangeCategory = event => {
+    setFilters(previousFilters => ({
       ...previousFilters,
-      category: event.target.value,
-    }));
-  };
+      category: event.target.value
+    }))
+  }
 
   return (
-    <section className="filters">
+    <section className='filters'>
       <div>
         <label htmlFor={minPriceFilterId}>Minimum price</label>
         <input
-          type="range"
+          type='range'
           id={minPriceFilterId}
-          min="0"
-          max="1000"
+          min='0'
+          max='1000'
           onChange={handleChangeMinPrice}
           value={filters.minPrice}
         />
@@ -38,11 +38,11 @@ export function Filters() {
       <div>
         <label htmlFor={categoryFilterId}>Category</label>
         <select id={categoryFilterId} onSelect={handleChangeCategory}>
-          <option value="all">All</option>
-          <option value="laptops">Laptops</option>
-          <option value="smartphones">Smartphones</option>
+          <option value='all'>All</option>
+          <option value='laptops'>Laptops</option>
+          <option value='smartphones'>Smartphones</option>
         </select>
       </div>
     </section>
-  );
+  )
 }

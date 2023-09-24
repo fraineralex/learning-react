@@ -8,7 +8,6 @@ import { CartProvider } from './context/cart.jsx'
 
 function App () {
   const { filterProducts } = useFilters()
-
   const filteredProducts = filterProducts(initialProducts)
 
   return (
