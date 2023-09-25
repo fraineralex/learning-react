@@ -1,35 +1,28 @@
 import './App.css'
+import HomePage from './pages/Home'
+import AboutPage from './pages/About'
+import Page404 from './pages/404'
+import SearchPage from './pages/SearchPage'
 
-const HomePage = () => {
-  return (
-    <>
-      <h1>Home</h1>
-      <p>This is an example application of a React Router from zero</p>
-      <a href='/about'>Go to about</a>
-    </>
-  )
-}
+import { Router } from './Router'
+import { Route } from './Route'
 
-const AboutPage = () => {
-  return (
-    <>
-      <h1>About</h1>
-      <div>
-        <img
-          src='https://unavatar.io/fraineralex'
-          alt='Frainer Encarnación photo'
-        />
-        <p>
-          Hi! I'am Frainer Encarnación and I'm creating a clone of React Router.
-        </p>
-      </div>
-      <a href='/home'>Go to home</a>
-    </>
-  )
-}
+const appRoutes = [
+  {
+    path: '/search/:query',
+    Component: SearchPage
+  }
+]
 
 const App = () => {
-  return <main></main>
+  return (
+    <main>
+      <Router routes={appRoutes} defaultComponent={Page404}>
+        <Route path='/' Component={HomePage} />
+        <Route path='/about' Component={AboutPage} />
+      </Router>
+    </main>
+  )
 }
 
 export default App
