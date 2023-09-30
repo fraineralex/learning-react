@@ -4,11 +4,11 @@
 
 # Aprendiendo React ⚛️
 
-Curso para aprender **React** basado en proyectos.
-**[Todos los miércoles a las 18PM 🇪🇸 en Twitch](https://twitch.tv/midudev)**
+**React** course taught by crack midudev from scratch based on projects.
+**[Every Wednesday at 18PM 🇪🇸 on Twitch](https://twitch.tv/midudev)**
 </div>
 
-## 📹 Videos con las clases
+## 📹 Videos of the classes
 
 - 01: [Introducción a React](https://www.youtube.com/watch?v=7iobxzd_2wY)
 - 02: [React Hooks: useState y useEffect](https://www.youtube.com/watch?v=qkzcjwnueLA&feature=youtu.be)
@@ -25,7 +25,7 @@ Curso para aprender **React** basado en proyectos.
 - 13: [JavaScript Quiz con Zustand + TypeScript desde cero](https://www.youtube.com/watch?v=p2wF2wRjcN0)
 - 14: Hacker News con TypeScript + SWR - Pendiente de subir
 
-## ⌨️ Proyectos de React con código
+## ⌨️ React projects with code
 
 | Número | Proyecto | Código | Web |
 | --- | --- | --- | --- |
