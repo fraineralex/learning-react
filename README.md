@@ -10,8 +10,8 @@
 
 ## 📹 Videos of the classes
 
-- 01: [Introducción a React](https://www.youtube.com/watch?v=7iobxzd_2wY)
-- 02: [React Hooks: useState y useEffect](https://www.youtube.com/watch?v=qkzcjwnueLA&feature=youtu.be)
+- 01: [Introduction to React](https://www.youtube.com/watch?v=7iobxzd_2wY)
+- 02: [React Hooks: useState and useEffect](https://www.youtube.com/watch?v=qkzcjwnueLA&feature=youtu.be)
 - 03: [Prueba técnica con lo aprendido](https://www.youtube.com/watch?v=XYpadB4VadY&feature=youtu.be)
 - 04: [Fetching de datos y Custom Hooks](https://youtu.be/x-LcbVw99o8)
 - 05: [React Hooks: useRef, useMemo, useCallback](https://youtu.be/GOEiMwDJ3lc)
