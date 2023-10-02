@@ -12,8 +12,8 @@
 
 - 01: [Introduction to React](https://www.youtube.com/watch?v=7iobxzd_2wY)
 - 02: [React Hooks: useState and useEffect](https://www.youtube.com/watch?v=qkzcjwnueLA&feature=youtu.be)
-- 03: [Prueba técnica con lo aprendido](https://www.youtube.com/watch?v=XYpadB4VadY&feature=youtu.be)
-- 04: [Fetching de datos y Custom Hooks](https://youtu.be/x-LcbVw99o8)
+- 03: [Technical test with what has been learned](https://www.youtube.com/watch?v=XYpadB4VadY&feature=youtu.be)
+- 04: [Data Fetching and Custom Hooks](https://youtu.be/x-LcbVw99o8)
 - 05: [React Hooks: useRef, useMemo, useCallback](https://youtu.be/GOEiMwDJ3lc)
 - 06: [React Hooks: useContext, useReducer, useId](https://www.youtube.com/watch?v=B9tDYAZZxcE)
 - 07: [React Router + Lazy Loading](https://www.youtube.com/watch?v=K2NcGYajvY4)
