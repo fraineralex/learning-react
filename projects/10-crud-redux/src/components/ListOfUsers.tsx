@@ -10,9 +10,11 @@ import {
 	Title,
 } from "@tremor/react";
 import { useAppSelector } from "../hooks/store";
+import { useUsersAction } from "../hooks/useUsersAction";
 
 export function ListOfUsers() {
 	const users = useAppSelector((state) => state.users);
+	const { removeUser } = useUsersAction();
 
 	return (
 		<Card>
@@ -65,7 +67,12 @@ export function ListOfUsers() {
 										/>
 									</svg>
 								</button>
-								<button type="button">
+								<button
+									type="button"
+									onClick={() => {
+										removeUser(item.id);
+									}}
+								>
 									<svg
 										aria-label='Remove element'
 										xmlns='http://www.w3.org/2000/svg'
