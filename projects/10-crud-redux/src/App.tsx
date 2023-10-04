@@ -1,7 +1,7 @@
-import { Toaster } from "sonner";
 import "./App.css";
-import { CreateNewUser } from "./components/CreateNewUser";
 import { ListOfUsers } from "./components/ListOfUsers";
+import { CreateNewUser } from './components/CreateNewUser';
+import { Toaster } from 'sonner'
 
 function App() {
 	return (
