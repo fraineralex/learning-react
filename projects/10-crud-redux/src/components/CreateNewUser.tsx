@@ -45,7 +45,7 @@ export function CreateNewUser() {
 						{result === "ok" && (
 							<Badge color='green'>Saved successfully</Badge>
 						)}
-						{result === "ko" && <Badge color='red'>Error with the fields</Badge>}
+						{result === "ko" && <Badge color='red'>Error saving the user data</Badge>}
 					</span>
 				</div>
 			</form>
