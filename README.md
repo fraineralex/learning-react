@@ -32,8 +32,8 @@
 | `01` | Twitter Follow Card | [Ver](projects/01-twitter-follow-card/) | [Visitar](https://midu-react-01.surge.sh) |
 | `02` | Tic Tac Toe | [Ver](projects/02-tic-tac-toe/) | [Visitar](https://midu-react-02.surge.sh) |
 | `03` | Mouse Follower | [Ver](projects/03-mouse-follower) | [Visitar](https://midu-react-03.surge.sh) |
-| `04` | Prueba técnica con Promesas, fetching y testing E2E | [Ver](projects/04-react-prueba-tecnica) | [Visitar](https://midu-react-04.surge.sh) |
-| `05` | Prueba técnica con formularios, buscador utilizando una API | [Ver](projects/05-react-buscador-peliculas) | [Visitar](https://midu-react-05.surge.sh) |
+| `04` | Technical test with promises, fetching and testing E2E | [Ver](projects/04-react-prueba-tecnica) | [Visitar](https://midu-react-04.surge.sh) |
+| `05` | Technical test with forms, searches using an API | [Ver](projects/05-react-buscador-peliculas) | [Visitar](https://midu-react-05.surge.sh) |
 | `06` | Creación de un ecommerce con carrito de compras | [Ver](projects/06-shopping-cart) | [Visitar](https://midu-react-06.surge.sh) |
 | `07` | Creación de un React Router desde cero | [Ver](projects/07-midu-router) | [Visitar](https://midu-react-07.surge.sh) |
 | `08` | Todo App con TypeScript y animaciones | [Ver](projects/08-todo-app-typescript) | [Visitar](https://midu-react-08.surge.sh) |
