@@ -15,7 +15,8 @@ function App () {
   const toggleColors = () => {
     setShowColors(!showColors)
   }
-
+  
+  // Filter users bu country
   const toggleSortByCountry = () => {
     const newSortingValue = sorting === SortBy.NONE ? SortBy.COUNTRY : SortBy.NONE
     setSorting(newSortingValue)
