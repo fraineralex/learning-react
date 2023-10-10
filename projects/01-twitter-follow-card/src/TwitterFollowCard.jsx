@@ -5,6 +5,7 @@ export function TwitterFollowCard ({ children, userName, initialIsFollowing }) {
 
   console.log('[TwitterFollowCard] render with userName: ', userName)
 
+  // change the text depends of the state
   const text = isFollowing ? 'Siguiendo' : 'Seguir'
   const buttonClassName = isFollowing
     ? 'tw-followCard-button is-following'
