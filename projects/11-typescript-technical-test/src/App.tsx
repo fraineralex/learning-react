@@ -2,23 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { SortBy, User } from './types.d'
 import './App.css'
 import { UserList } from './components/UserList'
-
-function useGetAllUsers () {
-  const [users, setUsers] = useState<User[]>([])
-
-  const originalUsers = useRef<User[]>([])
-
-  useEffect(() => {
-    fetch('https://randomuser.me/api/?results=100')
-      .then(response => response.json())
-      .then(data => {
-        setUsers(data.results)
-        originalUsers.current = data.results
-      })
-  }, [])
-
-  return { users, setUsers, originalUsers }
-}
+import { useGetAllUsers } from './hooks/useGetAllUsers'
 
 function App () {
   const { users, setUsers, originalUsers } = useGetAllUsers()
@@ -51,7 +35,8 @@ function App () {
   }
 
   const handleChangeSort = (sortingValue: SortBy) => {
-    const newSortingValue = sorting === sortingValue ? SortBy.NONE : sortingValue
+    const newSortingValue =
+      sorting === sortingValue ? SortBy.NONE : sortingValue
     setSorting(newSortingValue)
   }
 
