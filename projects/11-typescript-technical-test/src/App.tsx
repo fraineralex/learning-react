@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
-import { SortBy, User } from './types.d'
+import { useMemo, useState } from 'react'
+import { SortBy } from './types.d'
 import './App.css'
 import { UserList } from './components/UserList'
 import { useGetAllUsers } from './hooks/useGetAllUsers'
