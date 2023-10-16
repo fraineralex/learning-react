@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import { User } from '../types.d'
-import './App.css'
 
 const API_PATH = (results: number) => {
     return `https://randomuser.me/api/?results=${results}`
