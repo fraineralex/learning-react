@@ -1,44 +1,94 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { SortBy, User } from './types.d'
 import './App.css'
+import { UserList } from './components/UserList'
 
 function useGetAllUsers () {
   const [users, setUsers] = useState<User[]>([])
 
+  const originalUsers = useRef<User[]>([])
+
   useEffect(() => {
     fetch('https://randomuser.me/api/?results=100')
       .then(response => response.json())
-      .then(data => setUsers(data.results))
+      .then(data => {
+        setUsers(data.results)
+        originalUsers.current = data.results
+      })
   }, [])
 
-  return { users, setUsers }
+  return { users, setUsers, originalUsers }
 }
 
 function App () {
-  const { users, setUsers } = useGetAllUsers()
+  const { users, setUsers, originalUsers } = useGetAllUsers()
   const [showColor, setShowColor] = useState(false)
-  const [sortedUsers, SetSortedUsers] = useState<User[]>(users)
   const [sorting, setSorting] = useState<SortBy>(SortBy.NONE)
+  const [filterCountry, setFilterCountry] = useState<string | null>(null)
 
-  const handleOrderByCountry = () => {
-    const newSortedUsers = users.toSorted((a, b) =>
-      a.location.country.localeCompare(b.location.country)
-    )
-
-    SetSortedUsers(newSortedUsers)
+  const toggleColors = () => {
+    setShowColor(!showColor)
   }
+
+  const toggleSortByCountry = () => {
+    const newSortingValue =
+      sorting === SortBy.COUNTRY ? SortBy.NONE : SortBy.COUNTRY
+    setSorting(newSortingValue)
+  }
+
+  const handleReset = () => {
+    setUsers(originalUsers.current)
+    setFilterCountry(null)
+    const input = document.querySelector('input')
+    if (input) {
+      input.value = ''
+    }
+  }
+
+  const handleDeleteUser = (email: string) => {
+    const filteredUsers = users.filter(user => user.email !== email)
+    setUsers(filteredUsers)
+  }
+
+  const handleChangeSort = (sortingValue: SortBy) => {
+    const newSortingValue = sorting === sortingValue ? SortBy.NONE : sortingValue
+    setSorting(newSortingValue)
+  }
+
+  const filteredUsers = useMemo(() => {
+    return filterCountry !== null && filterCountry.length > 0
+      ? users.filter(user => {
+          return user.location.country
+            .toLowerCase()
+            .includes(filterCountry.toLowerCase())
+        })
+      : users
+  }, [filterCountry, users])
 
   return (
     <>
       <h1>Typescript Technical Test</h1>
       <header>
-        <button onClick={() => setShowColor(!showColor)}>Coloring rows</button>
-        <button onClick={handleOrderByCountry}>Order by country</button>
-        <button>Reset state</button>
-        <input type='text' placeholder='Filter by country' />
+        <button onClick={toggleColors}>Coloring rows</button>
+        <button onClick={toggleSortByCountry}>
+          {sorting === SortBy.COUNTRY
+            ? "Don't order by country"
+            : 'Order by country'}
+        </button>
+        <button onClick={handleReset}>Reset state</button>
+        <input
+          type='text'
+          placeholder='Filter by country'
+          onChange={e => setFilterCountry(e.target.value)}
+        />
       </header>
       <section style={{ width: '100%' }}>
-
+        <UserList
+          changeSorting={handleChangeSort}
+          deleteUser={handleDeleteUser}
+          showColors={showColor}
+          users={filteredUsers}
+        />
       </section>
     </>
   )
