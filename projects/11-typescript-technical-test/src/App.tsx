@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { SortBy } from './types.d'
+import { SortBy, User } from './types.d'
 import './App.css'
 import { UserList } from './components/UserList'
 import { useGetAllUsers } from './hooks/useGetAllUsers'
@@ -24,6 +24,7 @@ function App () {
     setUsers(originalUsers.current)
     setFilterCountry(null)
     const input = document.querySelector('input')
+    setShowColor(false)
     if (input) {
       input.value = ''
     }
@@ -50,6 +51,21 @@ function App () {
       : users
   }, [filterCountry, users])
 
+  const sortedUsers = useMemo(() => {
+    if (sorting === SortBy.NONE) return filteredUsers
+
+    const compareProperties: Record<string, (user: User) => any> = {
+      [SortBy.COUNTRY]: user => user.location.country,
+      [SortBy.NAME]: user => user.name.first,
+      [SortBy.LAST]: user => user.name.last
+    }
+
+    return filteredUsers.toSorted((a,b) => {
+      const extractProperty = compareProperties[sorting]
+      return extractProperty(a).localeCompare(extractProperty(b))
+    })
+  }, [filteredUsers, sorting])
+
   return (
     <>
       <h1>Typescript Technical Test</h1>
@@ -72,7 +88,7 @@ function App () {
           changeSorting={handleChangeSort}
           deleteUser={handleDeleteUser}
           showColors={showColor}
-          users={filteredUsers}
+          users={sortedUsers}
         />
       </section>
     </>
