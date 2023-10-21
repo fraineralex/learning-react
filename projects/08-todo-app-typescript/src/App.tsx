@@ -1,10 +1,15 @@
 import { useState } from 'react'
 import { mockTodos } from './mocks/todos'
 import { Todos } from './components/Todos'
-import { type FilterValue, type TodoId } from './types.d'
-import { type Todo } from './types.d'
+import {
+  type FilterValue,
+  type TodoId,
+  type TodoTitle,
+  type Todo
+} from './types.d'
 import { TODO_FILTERS } from './consts'
 import { Footer } from './components/Footer'
+import { Header } from './components/Header'
 
 const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>(mockTodos)
@@ -51,10 +56,20 @@ const App: React.FC = () => {
     return todo
   })
 
+  const handleSaveTodo = ({ title }: TodoTitle): void => {
+    const newTodo = {
+      id: crypto.randomUUID(),
+      title,
+      completed: false
+    }
+
+    setTodos([...todos, newTodo])
+  }
+
   return (
     <>
       <div className='todoapp'>
-        <h1>To Do App</h1>
+        <Header saveTodo={handleSaveTodo} />
         <Todos
           onRemoveTodo={handleRemove}
           onToggleCompletedTodo={handleCompleted}
