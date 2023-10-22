@@ -1,51 +1,40 @@
-import { TODO_FILTERS } from '../consts'
-import { type FilterValue } from '../types'
+import { TODO_FILTERS } from '../consts.js'
+import { type FilterValue } from '../types.js'
 
-const FILTER_BUTTONS = {
-  [TODO_FILTERS.ALL]: {
-    literal: 'All',
-    href: `#/${TODO_FILTERS.ALL}`
-  },
-  [TODO_FILTERS.ACTIVE]: {
-    literal: 'Active',
-    href: `#/${TODO_FILTERS.ACTIVE}`
-  },
-  [TODO_FILTERS.COMPLETED]: {
-    literal: 'Completed',
-    href: `#/${TODO_FILTERS.COMPLETED}`
-  }
-}
+const FILTERS_BUTTONS = {
+  [TODO_FILTERS.ALL]: { literal: 'All', href: `/?filter=${TODO_FILTERS.ALL}` },
+  [TODO_FILTERS.ACTIVE]: { literal: 'Active', href: `/?filter=${TODO_FILTERS.ACTIVE}` },
+  [TODO_FILTERS.COMPLETED]: { literal: 'Completed', href: `/?filter=${TODO_FILTERS.COMPLETED}` }
+} as const
 
 interface Props {
-  filterSelected: FilterValue
-  onFilterChange: (filter: FilterValue) => void
+  handleFilterChange: (filter: FilterValue) => void
+  filterSelected: typeof TODO_FILTERS[keyof typeof TODO_FILTERS]
 }
 
-export const Filters: React.FC<Props> = ({
-  filterSelected,
-  onFilterChange
-}) => {
-  //const handleClick = (filter: )
+export const Filters: React.FC<Props> = ({ filterSelected, handleFilterChange }) => {
+  const handleClick = (filter: FilterValue) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    handleFilterChange(filter)
+  }
 
   return (
-    <ul className='filters'>
-      {Object.entries(FILTER_BUTTONS).map(([key, { href, literal }]) => {
+  <ul className="filters">
+    {
+      Object.entries(FILTERS_BUTTONS).map(([key, { href, literal }]) => {
         const isSelected = key === filterSelected
         const className = isSelected ? 'selected' : ''
+
         return (
           <li key={key}>
-            <a
+            <a href={href}
               className={className}
-              onClick={event => {
-                event.preventDefault()
-                onFilterChange(key as FilterValue)
-              }}
-            >
-              {literal}
+              onClick={handleClick(key as FilterValue)}>{literal}
             </a>
           </li>
         )
-      })}
-    </ul>
+      })
+    }
+  </ul>
   )
 }
