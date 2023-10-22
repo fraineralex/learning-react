@@ -1,29 +1,48 @@
-import React from 'react'
-import { type TodoList, type TodoId, type Todo as TodoType } from '../types.d'
 import { Todo } from './Todo'
+import type { Todo as TodoType } from '../types'
+import { useState } from 'react'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 interface Props {
-  todos: TodoList
-  onRemoveTodo: ({ id }: TodoId) => void
-  onToggleCompletedTodo: ({ id, completed }: Pick<TodoType, 'id' | 'completed'>) => void
+  todos: TodoType[]
+  setCompleted: (id: string, completed: boolean) => void
+  setTitle: (params: Omit<TodoType, 'completed'>) => void
+  removeTodo: (id: string) => void
 }
 
-export const Todos: React.FC<Props> = ({ todos, onRemoveTodo, onToggleCompletedTodo }) => {
+export const Todos: React.FC<Props> = ({
+  todos,
+  setCompleted,
+  setTitle,
+  removeTodo
+}) => {
+  const [isEditing, setIsEditing] = useState('')
+  const [parent] = useAutoAnimate(/* optional config */)
+
   return (
-    <ul className='todo-list'>
-      {todos.length > 0 &&
-        todos.map(todo => (
-          <li key={todo.id} className={`${todo.completed ? 'completed' : ''}`}>
-            <Todo
-              key={todo.id}
-              id={todo.id}
-              title={todo.title}
-              completed={todo.completed}
-              onRemoveTodo={onRemoveTodo}
-              onToggleCompletedTodo={onToggleCompletedTodo}
-            />
-          </li>
-        ))}
+    <ul className='todo-list' ref={parent}>
+      {todos?.map((todo) => (
+        <li
+          key={todo.id}
+          onDoubleClick={() => { setIsEditing(todo.id) }}
+          className={`
+            ${todo.completed ? 'completed' : ''}
+            ${isEditing === todo.id ? 'editing' : ''}
+          `}
+        >
+          <Todo
+            key={todo.id}
+            id={todo.id}
+            title={todo.title}
+            completed={todo.completed}
+            setCompleted={setCompleted}
+            setTitle={setTitle}
+            removeTodo={removeTodo}
+            isEditing={isEditing}
+            setIsEditing={setIsEditing}
+          />
+        </li>
+      ))}
     </ul>
   )
 }
