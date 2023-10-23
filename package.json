@@ -10,7 +10,7 @@
     "projects/*"
   ],
   "keywords": [],
-  "author": "",
+  "author": "Frainer Encarnación",
   "license": "ISC",
   "devDependencies": {
     "standard": "^17.0.0"
