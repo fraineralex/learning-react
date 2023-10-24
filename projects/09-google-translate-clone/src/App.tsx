@@ -10,6 +10,7 @@ import { TextArea } from './components/TextArea'
 import { useEffect } from 'react'
 import { translate } from './services/translate'
 import { useDebounce } from './hooks/useDebounce'
+import { Footer } from './components/Footer'
 
 function App () {
   // use the hook useReducer
@@ -32,12 +33,14 @@ function App () {
     if (fromText === '') return
 
     translate({ fromLanguage, toLanguage, text: fromText })
-      .then((result) => {
+      .then(result => {
         console.log(result)
         if (result == null) return
         setResult(result)
       })
-      .catch(() => { setResult('Error!') })
+      .catch(() => {
+        setResult('Error!')
+      })
   }, [debouncedFromText, fromLanguage, toLanguage])
 
   const handleClipboard = () => {
@@ -51,8 +54,13 @@ function App () {
   }
 
   return (
-    <Container fluid>
-      <h1>Google Translate</h1>
+    <Container fluid style={{ width: 800 }}>
+      <header style={{ marginBottom: 20 }}>
+        <h1 style={{ textAlign: 'center' }}>
+          <img src='/favicon.ico' alt='google translate icon' style={{marginRight: 10, maxWidth: 50, paddingBottom: 10}}/>
+          Google Translate
+        </h1>
+      </header>
 
       <Row>
         <Col>
@@ -72,7 +80,11 @@ function App () {
         </Col>
 
         <Col xs='auto'>
-          <Button variant='link' disabled={fromLanguage === AUTO_LANGUAGE} onClick={interchangeLanguages}>
+          <Button
+            variant='link'
+            disabled={fromLanguage === AUTO_LANGUAGE}
+            onClick={interchangeLanguages}
+          >
             <ArrowsIcon />
           </Button>
         </Col>
@@ -91,25 +103,26 @@ function App () {
                 value={result}
                 onChange={setResult}
               />
-              <div style={{ position: 'absolute', left: 0, bottom: 0, display: 'flex' }}>
-                <Button
-                  variant='link'
-                  onClick={handleClipboard}
-                >
+              <div
+                style={{
+                  position: 'absolute',
+                  left: 0,
+                  bottom: 0,
+                  display: 'flex'
+                }}
+              >
+                <Button variant='link' onClick={handleClipboard}>
                   <ClipboardIcon />
                 </Button>
-                <Button
-                  variant='link'
-                  onClick={handleSpeak}
-                >
+                <Button variant='link' onClick={handleSpeak}>
                   <SpeakerIcon />
                 </Button>
               </div>
-
             </div>
           </Stack>
         </Col>
       </Row>
+      <Footer />
     </Container>
   )
 }
