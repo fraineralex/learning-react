@@ -22,8 +22,8 @@ const getPlaceholder = (type: SectionType, loading?: boolean) => {
 
 export const TextArea = ({ loading, value, type, onChange }: Props) => {
   const styles = type === SectionType.From
-    ? commonStyles
-    : { ...commonStyles, backgroundColor: '#f5f5f5' }
+    ? {...commonStyles, border: '1px solid #ddd'}
+    : { ...commonStyles, backgroundColor: '#f5f5f5'}
 
   const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     onChange(event.target.value)
