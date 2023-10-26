@@ -1,8 +1,10 @@
-export async function getAllQuestions(limit: number) {
-    const response = await fetch('http://localhost:5173/data.json')
-    const json = await response.json()
+import { quizzes } from '../types'
 
-    const questions = json.sort(() => Math.random() - 0.5).slice(0, limit)
+export async function getAllQuestions (limit: number, quiz: quizzes) {
+  const response = await fetch(`http://localhost:5173/questions-${quiz}.json`)
+  const json = await response.json()
 
-    return questions
+  const questions = json.sort(() => Math.random() - 0.5).slice(0, limit)
+
+  return questions
 }
