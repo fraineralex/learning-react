@@ -1,0 +1,603 @@
+[
+    {
+      "id": 1,
+      "question": "What is the result of this code?",
+      "code": "x = 5\ny = 2\nresult = x ** y\nprint(result)",
+      "answers": [
+        "10",
+        "25",
+        "7",
+        "Error"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 2,
+      "question": "What does this code print?",
+      "code": "nums = [1, 2, 3, 4, 5]\nfiltered_nums = filter(lambda x: x % 2 == 0, nums)\nprint(list(filtered_nums))",
+      "answers": [
+        "[2, 4]",
+        "[1, 3, 5]",
+        "[1, 2, 3, 4, 5]",
+        "Error"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 3,
+      "question": "What is the output of this code?",
+      "code": "def fibonacci(n):\n    if n <= 1:\n        return n\n    else:\n        return fibonacci(n-1) + fibonacci(n-2)\n\nprint(fibonacci(5))",
+      "answers": [
+        "8",
+        "5",
+        "13",
+        "Error"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 4,
+      "question": "What does this code print?",
+      "code": "import math\nprint(math.sqrt(16))",
+      "answers": [
+        "4",
+        "16",
+        "Error",
+        "2"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 5,
+      "question": "What is the output of this code?",
+      "code": "sentence = 'Hello, how are you?'\nwords = sentence.split()\nprint(len(words))",
+      "answers": [
+        "4",
+        "5",
+        "3",
+        "Error"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 6,
+      "question": "What does this code print?",
+      "code": "numbers = [1, 2, 3, 4]\nsquared_numbers = [x ** 2 for x in numbers]\nprint(squared_numbers)",
+      "answers": [
+        "[1, 4, 9, 16]",
+        "[2, 4, 6, 8]",
+        "[1, 2, 3, 4]",
+        "Error"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 7,
+      "question": "What is the output of this code?",
+      "code": "def multiply(a, b):\n    return a * b\n\nresult = multiply(3, '4')\nprint(result)",
+      "answers": [
+        "'444'",
+        "12",
+        "Error",
+        "'34'"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 8,
+      "question": "What does this code print?",
+      "code": "def func(x, y=2, z=3):\n    return x + y + z\n\nprint(func(1, z=4))",
+      "answers": [
+        "10",
+        "6",
+        "Error",
+        "9"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "id": 9,
+      "question": "What is the output of this code?",
+      "code": "def print_numbers(*args):\n    for num in args:\n        print(num)\n\nprint_numbers(1, 2, 3, 4, 5)",
+      "answers": [
+        "Error",
+        "1 2 3 4 5",
+        "(1, 2, 3, 4, 5)",
+        "15"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 10,
+      "question": "What does this code print?",
+      "code": "def outer_function(x):\n    def inner_function(y):\n        return x + y\n    return inner_function\n\nclosure = outer_function(10)\nprint(closure(5))",
+      "answers": [
+        "Error",
+        "15",
+        "10",
+        "5"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 11,
+      "question": "What is the result of this code?",
+      "code": "numbers = [1, 2, 3]\nnew_numbers = numbers + [4, 5]\nprint(len(new_numbers))",
+      "answers": [
+        "2",
+        "5",
+        "3",
+        "Error"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 12,
+      "question": "What does this code print?",
+      "code": "x = 10\ny = 5\nif x > 10 or y < 3:\n    print('True')\nelse:\n    print('False')",
+      "answers": [
+        "'False'",
+        "'True'",
+        "'False' 'True'",
+        "Error"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 13,
+      "question": "What is the result of this code?",
+      "code": "def func(x, y):\n    if x < y:\n        return x\n    else:\n        return y\n\nresult = func(5, 3)\nprint(result)",
+      "answers": [
+        "5",
+        "3",
+        "Error",
+        "2"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 14,
+      "question": "What does this code print?",
+      "code": "def func(x, y=2):\n    return x * y\n\nresult = func(3)\nprint(result)",
+      "answers": [
+        "6",
+        "Error",
+        "5",
+        "3"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 15,
+      "question": "What is the result of this code?",
+      "code": "def func(x, y):\n    if x == 0:\n        return y\n    else:\n        return func(x-1, x+y)\n\nresult = func(3, 0)\nprint(result)",
+      "answers": [
+        "6",
+        "5",
+        "3",
+        "Error"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 16,
+      "question": "What does this code print?",
+      "code": "numbers = [1, 2, 3, 4]\nfor num in numbers:\n    if num % 2 == 0:\n        print(num)",
+      "answers": [
+        "2 4",
+        "1 3",
+        "Error",
+        "1 2 3 4"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 17,
+      "question": "What is the output of this code?",
+      "code": "def power(x, y=2):\n    return x ** y\n\nprint(power(3))",
+      "answers": [
+        "6",
+        "9",
+        "Error",
+        "5"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 18,
+      "question": "What does this code print?",
+      "code": "def func(x, y):\n    if x > y:\n        return x\n    else:\n        return y\n\nresult = func(5, func(3, 7))\nprint(result)",
+      "answers": [
+        "3",
+        "5",
+        "7",
+        "Error"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 19,
+      "question": "What is the result of this code?",
+      "code": "def add(a, b):\n    return a + b\n\nnumbers = [1, 2, 3]\nresult = reduce(add, numbers)\nprint(result)",
+      "answers": [
+        "6",
+        "Error",
+        "5",
+        "10"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 20,
+      "question": "What does this code print?",
+      "code": "def square(x):\n    return x * x\n\nnumbers = [1, 2, 3, 4]\nsquared_numbers = map(square, numbers)\nprint(list(squared_numbers))",
+      "answers": [
+        "[1, 4, 9, 16]",
+        "[1, 2, 3, 4]",
+        "[2, 4, 6, 8]",
+        "Error"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 21,
+      "question": "What is the result of this code?",
+      "code": "def is_even(num):\n    return num % 2 == 0\n\nnumbers = [1, 2, 3, 4, 5]\neven_numbers = filter(is_even, numbers)\nprint(list(even_numbers))",
+      "answers": [
+        "[2, 4]",
+        "[1, 3, 5]",
+        "[1, 2, 3, 4, 5]",
+        "Error"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 22,
+      "question": "What does this code print?",
+      "code": "def greet(name):\n    print('Hello, ' + name + '!')\n\ngreet('Alice')\ngreet('Bob')",
+      "answers": [
+        "Error",
+        "Hello, Alice! Hello, Bob!",
+        "Hello, Alice!",
+        "Hello, Bob!"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 23,
+      "question": "What is the output of this code?",
+      "code": "def add(a, b):\n    return a + b\n\nnumbers = [1, 2, 3]\nresult = reduce(add, numbers)\nprint(result)",
+      "answers": [
+        "6",
+        "Error",
+        "5",
+        "10"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 24,
+      "question": "What does this code print?",
+      "code": "def greet(name='World'):\n    print('Hello, ' + name + '!')\n\ngreet()\ngreet('Alice')",
+      "answers": [
+        "Error",
+        "Hello, World! Hello, Alice!",
+        "Hello, World!",
+        "Hello, Alice!"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 25,
+      "question": "What is the output of this code?",
+      "code": "def print_numbers(*args):\n    for num in args:\n        print(num)\n\nprint_numbers(1, 2, 3, 4, 5)",
+      "answers": [
+        "Error",
+        "1 2 3 4 5",
+        "(1, 2, 3, 4, 5)",
+        "15"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 26,
+      "question": "What does this code print?",
+      "code": "def outer_function(x):\n    def inner_function(y):\n        return x + y\n    return inner_function\n\nclosure = outer_function(10)\nprint(closure(5))",
+      "answers": [
+        "Error",
+        "15",
+        "10",
+        "5"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 27,
+      "question": "What is the result of this code?",
+      "code": "numbers = [1, 2, 3]\nnew_numbers = numbers + [4, 5]\nprint(len(new_numbers))",
+      "answers": [
+        "2",
+        "5",
+        "3",
+        "Error"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 28,
+      "question": "What does this code print?",
+      "code": "x = 10\ny = 5\nif x > 10 or y < 3:\n    print('True')\nelse:\n    print('False')",
+      "answers": [
+        "'False'",
+        "'True'",
+        "'False' 'True'",
+        "Error"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 29,
+      "question": "What is the result of this code?",
+      "code": "def func(x, y):\n    if x < y:\n        return x\n    else:\n        return y\n\nresult = func(5, 3)\nprint(result)",
+      "answers": [
+        "5",
+        "3",
+        "Error",
+        "2"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 30,
+      "question": "What does this code print?",
+      "code": "def func(x, y=2):\n    return x * y\n\nresult = func(3)\nprint(result)",
+      "answers": [
+        "6",
+        "Error",
+        "5",
+        "3"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 31,
+      "question": "What is the result of this code?",
+      "code": "def func(x, y):\n    if x == 0:\n        return y\n    else:\n        return func(x-1, x+y)\n\nresult = func(3, 0)\nprint(result)",
+      "answers": [
+        "6",
+        "5",
+        "3",
+        "Error"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 32,
+      "question": "What does this code print?",
+      "code": "numbers = [1, 2, 3, 4]\nfor num in numbers:\n    if num % 2 == 0:\n        print(num)",
+      "answers": [
+        "2 4",
+        "1 3",
+        "Error",
+        "1 2 3 4"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 33,
+      "question": "What is the output of this code?",
+      "code": "def power(x, y=2):\n    return x ** y\n\nprint(power(3))",
+      "answers": [
+        "6",
+        "9",
+        "Error",
+        "5"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 34,
+      "question": "What does this code print?",
+      "code": "def func(x, y):\n    if x > y:\n        return x\n    else:\n        return y\n\nresult = func(5, func(3, 7))\nprint(result)",
+      "answers": [
+        "3",
+        "5",
+        "7",
+        "Error"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 35,
+      "question": "What is the result of this code?",
+      "code": "def add(a, b):\n    return a + b\n\nnumbers = [1, 2, 3]\nresult = reduce(add, numbers)\nprint(result)",
+      "answers": [
+        "6",
+        "Error",
+        "5",
+        "10"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 36,
+      "question": "What does this code print?",
+      "code": "def square(x):\n    return x * x\n\nnumbers = [1, 2, 3, 4]\nsquared_numbers = map(square, numbers)\nprint(list(squared_numbers))",
+      "answers": [
+        "[1, 4, 9, 16]",
+        "[1, 2, 3, 4]",
+        "[2, 4, 6, 8]",
+        "Error"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 37,
+      "question": "What is the result of this code?",
+      "code": "def is_even(num):\n    return num % 2 == 0\n\nnumbers = [1, 2, 3, 4, 5]\neven_numbers = filter(is_even, numbers)\nprint(list(even_numbers))",
+      "answers": [
+        "[2, 4]",
+        "[1, 3, 5]",
+        "[1, 2, 3, 4, 5]",
+        "Error"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 38,
+      "question": "What does this code print?",
+      "code": "def greet(name):\n    print('Hello, ' + name + '!')\n\ngreet('Alice')\ngreet('Bob')",
+      "answers": [
+        "Error",
+        "Hello, Alice! Hello, Bob!",
+        "Hello, Alice!",
+        "Hello, Bob!"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 39,
+      "question": "What is the output of this code?",
+      "code": "def add(a, b):\n    return a + b\n\nnumbers = [1, 2, 3]\nresult = reduce(add, numbers)\nprint(result)",
+      "answers": [
+        "6",
+        "Error",
+        "5",
+        "10"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 40,
+      "question": "What does this code print?",
+      "code": "def greet(name='World'):\n    print('Hello, ' + name + '!')\n\ngreet()\ngreet('Alice')",
+      "answers": [
+        "Error",
+        "Hello, World! Hello, Alice!",
+        "Hello, World!",
+        "Hello, Alice!"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 41,
+      "question": "What is the output of this code?",
+      "code": "def print_numbers(*args):\n    for num in args:\n        print(num)\n\nprint_numbers(1, 2, 3, 4, 5)",
+      "answers": [
+        "Error",
+        "1 2 3 4 5",
+        "(1, 2, 3, 4, 5)",
+        "15"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 42,
+      "question": "What does this code print?",
+      "code": "def outer_function(x):\n    def inner_function(y):\n        return x + y\n    return inner_function\n\nclosure = outer_function(10)\nprint(closure(5))",
+      "answers": [
+        "Error",
+        "15",
+        "10",
+        "5"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 43,
+      "question": "What is the result of this code?",
+      "code": "numbers = [1, 2, 3]\nnew_numbers = numbers + [4, 5]\nprint(len(new_numbers))",
+      "answers": [
+        "2",
+        "5",
+        "3",
+        "Error"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 44,
+      "question": "What does this code print?",
+      "code": "x = 10\ny = 5\nif x > 10 or y < 3:\n    print('True')\nelse:\n    print('False')",
+      "answers": [
+        "'False'",
+        "'True'",
+        "'False' 'True'",
+        "Error"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 45,
+      "question": "What is the result of this code?",
+      "code": "def func(x, y):\n    if x < y:\n        return x\n    else:\n        return y\n\nresult = func(5, 3)\nprint(result)",
+      "answers": [
+        "5",
+        "3",
+        "Error",
+        "2"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 46,
+      "question": "What does this code print?",
+      "code": "def func(x, y=2):\n    return x * y\n\nresult = func(3)\nprint(result)",
+      "answers": [
+        "6",
+        "Error",
+        "5",
+        "3"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 47,
+      "question": "What is the result of this code?",
+      "code": "def func(x, y):\n    if x == 0:\n        return y\n    else:\n        return func(x-1, x+y)\n\nresult = func(3, 0)\nprint(result)",
+      "answers": [
+        "6",
+        "5",
+        "3",
+        "Error"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 48,
+      "question": "What does this code print?",
+      "code": "numbers = [1, 2, 3, 4]\nfor num in numbers:\n    if num % 2 == 0:\n        print(num)",
+      "answers": [
+        "2 4",
+        "1 3",
+        "Error",
+        "1 2 3 4"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 49,
+      "question": "What is the output of this code?",
+      "code": "def power(x, y=2):\n    return x ** y\n\nprint(power(3))",
+      "answers": [
+        "6",
+        "9",
+        "Error",
+        "5"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 50,
+      "question": "What does this code print?",
+      "code": "def func(x, y):\n    if x > y:\n        return x\n    else:\n        return y\n\nresult = func(5, func(3, 7))\nprint(result)",
+      "answers": [
+        "3",
+        "5",
+        "7",
+        "Error"
+      ],
+      "correctAnswer": 2
+    }
+  ]
+  
