@@ -10,8 +10,8 @@
   backdrop-filter: blur(8px);
 }
 
-.footer span {
-  font-size: 14px;
+.footer a {
+  font-size: 16px;
   color: #09f;
   opacity: .8;
 }
