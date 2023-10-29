@@ -1,14 +1,13 @@
-import { Suspense, lazy } from 'react'
+import { lazy, Suspense } from 'react'
 
-import './App.css'
-import Page404 from './pages/404'
-import SearchPage from './pages/SearchPage'
+import Page404 from './pages/404.jsx'
+import SearchPage from './pages/SearchPage.jsx'
 
-import { Router } from './Router'
-import { Route } from './Route'
+import { Router } from './components/Router.jsx'
+import { Route } from './components/Route.jsx'
 
-const LazyAboutPage = lazy(() => import('./pages/About')) // lazy loading
-const LazyHomePage = lazy(() => import('./pages/Home')) // lazy loading
+const LazyHomePage = lazy(() => import('./pages/Home.jsx'))
+const LazyAboutPage = lazy(() => import('./pages/About.jsx'))
 
 const appRoutes = [
   {
@@ -21,7 +20,7 @@ const appRoutes = [
   }
 ]
 
-const App = () => {
+function App () {
   return (
     <main>
       <Suspense fallback={null}>

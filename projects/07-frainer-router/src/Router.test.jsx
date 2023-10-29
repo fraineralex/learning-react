@@ -1,11 +1,11 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { cleanup, fireEvent, render, screen } from '@testing-library/react'
-import { Router } from './Router.jsx'
-import { Route } from './Route.jsx'
-import { Link } from './Link.jsx'
-import { getCurrentPath } from './utils.js'
+import { describe, it, expect, beforeEach, vi } from 'vitest'
+import { render, screen, cleanup, fireEvent } from '@testing-library/react'
+import { Router } from './components/Router.jsx'
+import { Route } from './components/Route.jsx'
+import { Link } from './components/Link.jsx'
+import { getCurrentPath } from './utils/getCurrentPath.js'
 
-vi.mock('./utils.js', () => ({
+vi.mock('./utils/getCurrentPath.js', () => ({
   getCurrentPath: vi.fn()
 }))
 
@@ -49,8 +49,7 @@ describe('Router', () => {
     render(
       <Router>
         <Route
-          path='/'
-          Component={() => {
+          path='/' Component={() => {
             return (
               <>
                 <h1>Home</h1>
@@ -63,13 +62,13 @@ describe('Router', () => {
       </Router>
     )
 
-    // CLick on the link
-    const button = screen.getByText(/Go to About/)
-    fireEvent.click(button)
+    // Click on the link
+    const anchor = screen.getByText(/Go to About/)
+    fireEvent.click(anchor)
 
     const aboutTitle = await screen.findByText('About')
 
-    // Check that the new page is rendered
+    // Check that the new route is rendered
     expect(aboutTitle).toBeTruthy()
   })
 })
