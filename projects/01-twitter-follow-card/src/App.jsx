@@ -13,8 +13,8 @@ const users = [
     isFollowing: true
   },
   {
-    userName: 'Jeison De los Santos',
-    name: 'jeisondls',
+    userName: 'jeisondls',
+    name: 'Jeison De los Santos',
     isFollowing: false
   },
   {
