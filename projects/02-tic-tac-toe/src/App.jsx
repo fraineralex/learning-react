@@ -5,6 +5,7 @@ import { Square } from './components/Square'
 import { TURNS } from './constants'
 import { checkWinner } from './logic/board'
 import { WinnerModal } from './components/WinnerModal'
+import { Footer } from './components/Footer'
 
 function App () {
   const [board, setBoard] = useState(() => {
@@ -78,6 +79,7 @@ function App () {
       </section>
 
       <WinnerModal winner={winner} resetGame={resetGame} />
+      <Footer />
     </main>
   )
 }
