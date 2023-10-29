@@ -5,7 +5,9 @@
   align-items: center;
   width: 100%;
   max-width: 800px;
+  font-family: system-ui;
 }
+
 
 main {
   display: flex;
@@ -42,4 +44,9 @@ form {
 .movie img {
   border-radius: 8px;
   margin-top: 16px;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
