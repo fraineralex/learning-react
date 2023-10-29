@@ -42,5 +42,5 @@
 | `11` | Technical test with React and TypeScript | [Watch](projects/11-typescript-technical-test/) | [Visit](https://midu-react-11.surge.sh) |
 | `12` | Technical test with React, TypeScript and React Query | [Watch](projects/12-typescript-with-react-query/) | [Visit](https://midu-react-11.surge.sh) |
 | `13` | Comments system with React, TypeScript and React Query | [Watch](projects/13-comments-react-query) | [Visit](https://midu-react-12.surge.sh) |
-| `14` | JavaScript Quiz with Zustand and TypeScript | [Watch](projects/14-javascript-quiz-with-zustand/) | [Visit](https://midu-react-13.surge.sh) |
-| `15` | Hacker News with TypeScript and SWR | [Watch](projects/15-hacker-news-prueba-tecnica) | [Visit](https://midu-react-14.surge.sh) |
+| `14` |Programming Quizzes with Zustand and TypeScript | [Watch](projects/14-programming-quizzes-with-zustand/) | [Visit](https://midu-react-13.surge.sh) |
+| `15` | Hacker News with TypeScript and SWR | [Watch](projects/115-hacker-news-with-typescript-and-swr) | [Visit](https://midu-react-14.surge.sh) |
