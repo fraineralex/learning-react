@@ -29,13 +29,13 @@
 
 | Número | Proyecto | Código | Web |
 | --- | --- | --- | --- |
-| `01` | Twitter Follow Card | [Watch](projects/01-twitter-follow-card/) | [Visit](https://midu-react-01.surge.sh) |
-| `02` | Tic Tac Toe | [Watch](projects/02-tic-tac-toe/) | [Visit](https://midu-react-02.surge.sh) |
-| `03` | Mouse Follower | [Watch](projects/03-mouse-follower) | [Visit](https://midu-react-03.surge.sh) |
-| `04` | React Technical test with promises, fetching and testing E2E | [Watch](projects/04-react-technical-test) | [Visit](https://midu-react-04.surge.sh) |
-| `05` | Movie Search App using an API | [Watch](projects/05-react-movie-search) | [Visit](https://midu-react-05.surge.sh) |
-| `06` | Ecommerce platform with shopping cart. | [Watch](projects/06-shopping-cart) | [Visit](https://midu-react-06.surge.sh) |
-| `07` | Creation of a React Router from scratch | [Watch](projects/07-fraineralex-router) | [Visit](https://midu-react-07.surge.sh) |
+| `01` | Twitter Follow Card | [Watch](projects/01-twitter-follow-card/) | [Visit](https://twitter-follow-card-example.surge.sh/) |
+| `02` | Tic Tac Toe | [Watch](projects/02-tic-tac-toe/) | [Visit](https://tic-tac-toe-3x3.surge.sh/) |
+| `03` | Mouse Follower | [Watch](projects/03-mouse-follower) | [Visit](https://mouse-follower.surge.sh) |
+| `04` | React Technical test with promises, fetching and testing E2E | [Watch](projects/04-react-cats-app) | [Visit](https://cats-fact-app.surge.sh/) |
+| `05` | Movie Search App using an API | [Watch](projects/05-react-movie-search) | [Visit](https://react-movie-search-engine.surge.sh/) |
+| `06` | Ecommerce platform with shopping cart. | [Watch](projects/06-shopping-cart) | [Visit](https://frainer-shopping-cart.surge.sh/) |
+| `07` | Creation of a React Router from scratch | [Watch](projects/07-frainer-router) | [Visit](https://www.npmjs.com/package/frainer-router) |
 | `08` | To do App with TypeScript and animations | [Watch](projects/08-todo-app-typescript) | [Visit](https://midu-react-08.surge.sh) |
 | `09` | Creation of a Google Translate with TypeScript and openai API  | [Watch](projects/09-google-translate-clone/) | [Visit](https://midu-react-09.surge.sh) |
 | `10` | CRUD with Redux Toolkit and TypeScript | [Watch](projects/10-crud-redux/) | [Visit](https://midu-react-10.surge.sh) |
