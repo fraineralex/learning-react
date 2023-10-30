@@ -2,6 +2,7 @@ import './App.css'
 import { ListOfUsers } from './components/ListOfUsers'
 import { CreateNewUser } from './components/CreateNewUser'
 import { Toaster } from 'sonner'
+import { Footer } from './components/Footer'
 
 function App () {
   return (
@@ -23,6 +24,7 @@ function App () {
       <ListOfUsers />
       <CreateNewUser />
       <Toaster richColors />
+      <Footer />
     </main>
   )
 }

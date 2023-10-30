@@ -1,0 +1,24 @@
+.footer {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  text-align: left;
+  background: #fff;
+  padding: 8px 24px;
+  border-radius: 32px;
+  opacity: .95;
+  backdrop-filter: blur(8px);
+  border: rgb(173, 7, 228) 1px solid;
+}
+
+.footer a {
+  font-size: 16px;
+  color: rgb(0, 74, 165);
+  opacity: .8;
+}
+
+.footer p{
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+}

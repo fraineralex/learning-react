@@ -2,6 +2,7 @@ import { SortBy } from './types.d'
 import './App.css'
 import { UserList } from './components/UserList'
 import { useFilters } from './hooks/useFilters'
+import { Footer } from './components/Footer'
 
 function App () {
   const {
@@ -18,7 +19,7 @@ function App () {
 
   return (
     <>
-      <h1>Typescript Technical Test</h1>
+      <h1>React Technical Test</h1>
       <header>
         <button onClick={toggleColors}>Coloring rows</button>
         <button onClick={toggleSortByCountry}>
@@ -41,6 +42,7 @@ function App () {
           users={sortedUsers}
         />
       </section>
+      <Footer />
     </>
   )
 }
