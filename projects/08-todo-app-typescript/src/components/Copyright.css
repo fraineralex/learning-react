@@ -3,11 +3,12 @@
   left: 16px;
   bottom: 16px;
   text-align: left;
-  background: #ffffff;
+  background: #fff;
   padding: 8px 24px;
   border-radius: 32px;
   opacity: .95;
   backdrop-filter: blur(8px);
+  border: rgb(228, 7, 7) 1px solid;
 }
 
 .copyright a {
