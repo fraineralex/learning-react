@@ -36,7 +36,7 @@
 | `05` | Movie Search App using an API | [Watch](projects/05-react-movie-search) | [Visit](https://react-movie-search-engine.surge.sh/) |
 | `06` | Ecommerce platform with shopping cart. | [Watch](projects/06-shopping-cart) | [Visit](https://frainer-shopping-cart.surge.sh/) |
 | `07` | Creation of a React Router from scratch | [Watch](projects/07-frainer-router) | [Visit](https://www.npmjs.com/package/frainer-router) |
-| `08` | To do App with TypeScript and animations | [Watch](projects/08-todo-app-typescript) | [Visit](https://midu-react-08.surge.sh) |
+| `08` | To do App with TypeScript and animations | [Watch](projects/08-todo-app-typescript) | [Visit](https://frainer-todo-app.surge.sh/) |
 | `09` | Creation of a Google Translate with TypeScript and openai API  | [Watch](projects/09-google-translate-clone/) | [Visit](https://midu-react-09.surge.sh) |
 | `10` | CRUD with Redux Toolkit and TypeScript | [Watch](projects/10-crud-redux/) | [Visit](https://midu-react-10.surge.sh) |
 | `11` | Technical test with React and TypeScript | [Watch](projects/11-typescript-technical-test/) | [Visit](https://midu-react-11.surge.sh) |
