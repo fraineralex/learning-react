@@ -3,6 +3,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { getComments, type CommentWithId, type Comment, postComment } from './service/comments'
 import { FormInput, FormTextArea } from './components/Form'
 import { Results } from './components/Results'
+import { Footer } from './components/Footer'
 
 function App () {
   const { data, isLoading, error } = useQuery<CommentWithId[]>(
@@ -61,8 +62,8 @@ function App () {
     <main className='grid h-screen grid-cols-2'>
       <div className='col-span-1 p-8 bg-white'>
 
-        {isLoading && <strong>Cargando...</strong>}
-        {error != null && <strong>Algo ha ido mal</strong>}
+        {isLoading && <strong>Loading...</strong>}
+        {error != null && <strong>Something went wrong!</strong>}
         <Results data={data} />
 
       </div>
@@ -76,10 +77,11 @@ function App () {
             disabled={isLoadingMutation}
             type='submit' className='mt-4 px-12 text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm py-2.5 text-center mr-2 mb-2'
           >
-            {isLoadingMutation ? 'Enviando comentario...' : 'Enviar comentario'}
+            {isLoadingMutation ? 'Sending comment...' : 'Send comment'}
           </button>
         </form>
       </div>
+      <Footer />
     </main>
   )
 }
