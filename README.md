@@ -38,7 +38,7 @@
 | `07` | Creation of a React Router from scratch | [Watch](projects/07-frainer-router) | [Visit](https://www.npmjs.com/package/frainer-router) |
 | `08` | To do App with TypeScript and animations | [Watch](projects/08-todo-app-typescript) | [Visit](https://frainer-todo-app.surge.sh/) |
 | `09` | Creation of a Google Translate with TypeScript and openai API  | [Watch](projects/09-google-translate-clone/) | [Visit](https://midu-react-09.surge.sh) |
-| `10` | CRUD with Redux Toolkit and TypeScript | [Watch](projects/10-crud-redux/) | [Visit](https://midu-react-10.surge.sh) |
+| `10` | CRUD with Redux Toolkit and TypeScript | [Watch](projects/10-crud-redux/) | [Visit](https://frainer-redux-crud.surge.sh/) |
 | `11` | Technical test with React and TypeScript | [Watch](projects/11-typescript-technical-test/) | [Visit](https://midu-react-11.surge.sh) |
 | `12` | Technical test with React, TypeScript and React Query | [Watch](projects/12-typescript-with-react-query/) | [Visit](https://midu-react-11.surge.sh) |
 | `13` | Comments system with React, TypeScript and React Query | [Watch](projects/13-comments-react-query) | [Visit](https://midu-react-12.surge.sh) |

@@ -17,5 +17,8 @@
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
+  },
+  "dependencies": {
+    "@tremor/react": "^3.10.0"
   }
 }
