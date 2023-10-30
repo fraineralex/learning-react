@@ -15,10 +15,16 @@ const DEFAULT_STATE = [
 	},
 	{
 		id: "3",
-		name: "Miguel Angel",
-		email: "miguel@gmail.com",
-		github: "midudev",
+		name: "Ralph Severino",
+		email: "ralpseverino@gmail.com",
+		github: "rseverinop",
 	},
+	{
+		id: "4",
+		name: "Samantha Ming",
+		email: "samanthaming@gmail.com",
+		github: "samanthaming",
+	}
 ];
 
 export type UserId = string;

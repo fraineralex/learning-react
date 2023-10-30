@@ -29,8 +29,8 @@ export function CreateNewUser() {
 	}
 
 	return (
-		<Card style={{ marginTop: "16px" }}>
-			<Title>Create New User</Title>
+		<Card style={{ marginTop: "16px", }}>
+			<Title style={{ marginBottom: '10px' }}>Create New User</Title>
 
 			<form onSubmit={handleSubmit} className="">
 				<TextInput name="name" placeholder="Name" />

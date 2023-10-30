@@ -1,25 +1,25 @@
 import {
-	Badge,
-	Card,
-	Table,
-	TableBody,
-	TableCell,
-	TableHead,
-	TableHeaderCell,
-	TableRow,
-	Title
+  Badge,
+  Card,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeaderCell,
+  TableRow,
+  Title
 } from '@tremor/react'
 import { useAppSelector } from '../hooks/store'
 import { useUserActions } from '../hooks/useUserActions'
 
 export function ListOfUsers () {
-  const users = useAppSelector((state) => state.users)
+  const users = useAppSelector(state => state.users)
   const { removeUser } = useUserActions()
 
   return (
     <Card>
       <Title>
-        Usuarios
+        Users
         <Badge style={{ marginLeft: '8px' }}>{users.length}</Badge>
       </Title>
       <Table>
@@ -33,16 +33,16 @@ export function ListOfUsers () {
         </TableHead>
 
         <TableBody>
-          {users.map((item) => (
+          {users.map(item => (
             <TableRow key={item.name}>
               <TableCell>{item.id}</TableCell>
               <TableCell style={{ display: 'flex', alignItems: 'center' }}>
                 <img
                   style={{
-									  width: '32px',
-									  height: '32px',
-									  borderRadius: '50%',
-									  marginRight: '8px'
+                    width: '32px',
+                    height: '32px',
+                    borderRadius: '50%',
+                    marginRight: '8px'
                   }}
                   src={`https://unavatar.io/github/${item.github}`}
                   alt={item.name}
