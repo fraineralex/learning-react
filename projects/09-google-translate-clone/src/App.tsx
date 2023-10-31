@@ -57,7 +57,11 @@ function App () {
     <Container fluid style={{ width: 800 }}>
       <header style={{ marginBottom: 20 }}>
         <h1 style={{ textAlign: 'center' }}>
-          <img src='/favicon.ico' alt='google translate icon' style={{marginRight: 10, maxWidth: 50, paddingBottom: 10}}/>
+          <img
+            src='/favicon.ico'
+            alt='google translate icon'
+            style={{ marginRight: 10, maxWidth: 50, paddingBottom: 10 }}
+          />
           Google Translate
         </h1>
       </header>
