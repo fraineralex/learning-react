@@ -44,3 +44,6 @@
 | `13` | Comments system with React, TypeScript and React Query | [Watch](projects/13-comments-react-query) | [Visit](https://frainer-comments-app.surge.sh) |
 | `14` |Programming Quizzes with Zustand and TypeScript | [Watch](projects/14-programming-quizzes-with-zustand/) | [Visit](https://programming-quizzes.surge.sh/) |
 | `15` | Hacker News with TypeScript and SWR | [Watch](projects/15-hacker-news-with-typescript-and-swr) | [Visit](https://frainer-hacker-news.surge.sh/) |
+
+## 📝 Annotations
+All my annotations taken during the complete course, with code examples, completely in Spanish and with my personal opinion are found here ➡️ [annotations](anotaciones.md).
