@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react'
 import { Header } from './components/Header'
 import { Route } from 'wouter'
+import { Footer } from './components/Footer'
 
 const TopStoriesPage = lazy(() => import('./pages/TopStories'))
 const DetailPage = lazy(() => import('./pages/Detail'))
@@ -16,6 +17,8 @@ export default function App () {
           <Route path='/article/:id' component={DetailPage} />
         </Suspense>
       </main>
+
+      <Footer />
     </>
   )
 }

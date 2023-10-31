@@ -29,7 +29,7 @@ export default function WinnerModal ({
   correctAnswers,
   incorrectAnswers
 }: Props) {
-  const [open, setOpen] = React.useState(true)
+  const [open] = React.useState(true)
   const resetGame = useQuestionsStore(state => state.reset)
 
   const handleClose = () => {

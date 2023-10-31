@@ -20,7 +20,7 @@ export default function TopStoriesPage () {
   const stories = data?.flat()
 
   useEffect(() => {
-    document.title = 'Hacker News - Prueba Técnica USA de Frontend'
+    document.title = 'Hacker News Clone'
   }, [])
 
   useEffect(() => {

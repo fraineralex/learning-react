@@ -39,7 +39,7 @@ function App () {
         setResult(result)
       })
       .catch(() => {
-        setResult('Error!')
+        setResult('My openai api key no longer works! 😢')
       })
   }, [debouncedFromText, fromLanguage, toLanguage])
 

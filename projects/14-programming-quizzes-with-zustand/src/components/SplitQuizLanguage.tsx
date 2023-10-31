@@ -12,7 +12,7 @@ import { SoporteQuizzes, quizzes } from '../types.d'
 import { LanguageLogo } from './LanguagesLogos'
 import { Typography } from '@mui/material'
 
-const options = Object.entries(SoporteQuizzes).map(([key, value]) => value)
+const options = Object.entries(SoporteQuizzes).map(([, value]) => value)
 
 interface Props {
   changeQuiz: (quiz: quizzes) => void
@@ -31,6 +31,7 @@ export default function SplitQuizLanguage ({ changeQuiz, selectedQuiz }: Props) 
     index: number,
     language: quizzes
   ) => {
+    event.preventDefault()
     changeQuiz(language)
     setSelectedIndex(index)
     setOpen(false)

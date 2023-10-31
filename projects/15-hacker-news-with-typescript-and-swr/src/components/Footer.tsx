@@ -4,9 +4,9 @@ export function Footer () {
   return (
     <footer className='footer' style={{ textAlign: 'center', color: 'black' }}>
       <strong>
-        Google Translate－<a target='a_blanc' href='https://github.com/fraineralex'>@fraineralex</a>
+        Hacker News Clone－<a target='a_blanc' href='https://github.com/fraineralex'>@fraineralex</a>
       </strong>
-      <p>Build with React, TypeScript and openai API.</p>
+      <p>Build with React, TypeScript and SWR.</p>
     </footer>
   )
 }

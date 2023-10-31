@@ -1,6 +1,6 @@
 .footer {
   position: fixed;
-  left: 16px;
+  right: 16px;
   bottom: 16px;
   text-align: left;
   background: #f5f5f5;
@@ -8,12 +8,12 @@
   border-radius: 32px;
   opacity: .95;
   backdrop-filter: blur(8px);
-  border: #09f 1px solid;
+  border: #FF6600 1px solid;
 }
 
 .footer a {
   font-size: 16px;
-  color: #09f;
+  color: #FF6600;
   opacity: .8;
 }
 
