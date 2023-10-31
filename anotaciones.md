@@ -1090,4 +1090,4 @@ function Counter() {
 
 ## 🔥 Redux vs Zustand
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/6fd22c9c-a3e0-40c0-b242-f80c2db3c42a/35a0e985-6b1b-4b6a-872a-57c3cda86e72/Untitled.png)
+[![redux-vs-zustand.png](https://i.postimg.cc/GmD81RTx/redux-vs-zustand.png)](https://postimg.cc/DS2yqtgS)
